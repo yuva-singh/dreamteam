@@ -38,7 +38,7 @@ function Home() {
             {" "}
             <h1 className="fw-bold text-center display-5">
               {" "}
-              <span className="color">DreamTeam</span> — Your Best
+              <span className="color">WaveMantra</span> — Your Best
               Collaboration Tool for Business
             </h1>
           </div>

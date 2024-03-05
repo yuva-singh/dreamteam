@@ -25,10 +25,10 @@ function About() {
             />
           </div>
           <div className="col-xl-8 Content-center">
-            DreamTeam is a Best Web Development Company with the latest
+            WaveMantra is a Best Web Development Company with the latest
             and innovative ideas generating and thus creating a tremendous craft
             in the form of a website. We gives you the desired results within
-            the affordable costs. DreamTeam has an expertise team of
+            the affordable costs. WaveMantra has an expertise team of
             professionals who work with their full dedication and work out the
             best for its customers. We look to manufacture enduring websites for
             our customers which are user friendly and handy for them.

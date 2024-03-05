@@ -10,7 +10,7 @@ function HomeAboutus() {
                 <div className="row justify-content-center">
                     <div className="col-xl-6 Content-center">
                         <div className='p-3 px-2 py-3'>
-                            <p className='fs-4 fw-bold'><span className='color' >DreamTeam Web</span> - is an all-in-one workspace for Agencies and Digital Professionals that takes your client collaboration to another level</p>
+                            <p className='fs-4 fw-bold'><span className='color' >WaveMantra Web</span> - is an all-in-one workspace for Agencies and Digital Professionals that takes your client collaboration to another level</p>
                             <p>Save your time by creating an all-together collab & info hub in SoftInfo. Deliver an exceptional experience to your clients through all stages: from lead generation to project completion</p>
                         </div>
                     </div>

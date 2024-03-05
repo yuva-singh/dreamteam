@@ -35,7 +35,7 @@ function Navbar() {
       <div class="container">
         <Link to='/' class="navbar-brand" href="#">
           {/* <img src={logo} alt="" /> */}
-          <h2>DreamTeam</h2>
+          <h2>WaveMantra</h2>
         </Link>
         <button
           class="navbar-toggler"
