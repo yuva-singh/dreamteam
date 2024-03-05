@@ -18,7 +18,7 @@ function Testimonials() {
     },
     {
       id: "3",
-      heading: "Amar",
+      heading: "Sachin",
       pra: "All along the process, Mr. Manish and his team were Pretty creative and responsive. They Developed and delivered the project the same way we wanted to. For me, this was the best team I have ever worked with, so I would sincerely recommend them. ",
     },
     {
