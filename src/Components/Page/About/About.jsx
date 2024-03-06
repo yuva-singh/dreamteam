@@ -5,10 +5,10 @@ import marketing from "../../../Animation/marketing.json";
 function About() {
   return (
     <>
-      <div className="container-fluid py-5 background-color">
+      <div className="container-fluid background-color">
         <div className="row">
-          <div className="col-xl-12 py-2">
-            <h1 className="fw-bold text-center display-5">
+          <div className="col-xl-12 py-3">
+            <h1 className="fw-bold text-center display-6">
               About <span className="color">Us</span>
             </h1>
           </div>

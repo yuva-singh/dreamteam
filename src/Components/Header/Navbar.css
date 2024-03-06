@@ -3,23 +3,15 @@
 }
 
 .active-navbar{
-  border: 2px solid #6c63ff;
+  border-bottom: 2px solid #6c63ff;
   display: flex;
+  padding-bottom:0px !important;
+
   background-color: none;
-  /* box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); */
-  padding:6px 20px 6px !important;
-  border-width:2px;
-  border-radius:30px;
   transition: ease-in-out 10ms;
 }
 .active-navbar-mobile{
-  border: 2px solid #6c63ff;
-  display: flex;
-  background-color: none;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-  padding:6px 10px 6px !important;
-  border-width:2px;
-  border-radius:30px;
+  color: #6c63ff;
   transition: ease-in-out 10ms;
 }
 @media only screen and (min-width: 992px) {

@@ -19,18 +19,12 @@ function Service() {
           <div className="col-xl-6 Content-center">
             <div className="p-2">
               <h1 className="fw-bold display-6">
-                Do You Want To Generate More Leads We Know The <span className="color" >Solution</span>
+                Unlock More <span className="color"> Leads </span>: Our Proven Solution is Here.
               </h1>
-              <h1 className="fs-5 fw-bold ">
-                <i className="bi bi-check-circle color"></i> Online Exposure
+              <h1 className="fs-5">
+                Maximize Online Exposure for Higher Revenue: SEO, SMO, PPC, SEM Solutions.
               </h1>
-              <h1 className="fs-5 fw-bold">
-                <i className="bi bi-check-circle color"></i> Increased Revenue
-              </h1>
-              <h1 className="fs-5 fw-bold">
-                <i className="bi bi-check-circle color"></i> SEO / SMO / PPC /
-                SEM
-              </h1>
+
             </div>
           </div>
         </div>
@@ -40,24 +34,24 @@ function Service() {
         <div className="row justify-content-center py-5">
           <div className="col-xl-10">
             <h1 className="display-5 fw-bold text-center">
-              We Are A Full-Stack Digital Creative Consulting Agency
+              We're Your <span className="color">Complete</span> Digital Creative Consulting Agency
             </h1>
             <div className="row">
               <div className="col-xl-4 px-2">
                 <div className="shadow-sm rounded">
                   <div className="px-3 py-3">
                     <h1 className="text-center fs-4 fw-bold">
-                      Website <span className="color">Design</span>
+                      <span className="color">Web </span>Development
                     </h1>
-                    <img
+                    {/* <img
                       src={require("../../../Image/web.png")}
                       alt=""
                       className="img-fluid"
-                    />
-                    <p className="text-center fs-5">
-                      Web design for online success, Specializing in creating
-                      highly performing sites for mid-market to enterprise
-                      businesses.
+                    /> */}
+                    <div className="text-center">
+                    <i class="bi bi-browser-chrome fs-1"></i>                    </div>
+                    <p className="fs-5">
+                      Expert web development services tailored to your needs. Elevate your online presence with our cutting-edge solutions.
                     </p>
                   </div>
                 </div>
@@ -66,16 +60,19 @@ function Service() {
                 <div className="shadow-sm rounded">
                   <div className="px-3 py-3">
                     <h1 className="text-center fs-4 fw-bold">
-                      Website <span className="color">Development</span>
+                      <span className="color">App </span>Development
                     </h1>
-                    <img
+                    {/* <img
                       src={require("../../../Image/app.png")}
                       alt=""
                       className="img-fluid"
-                    />
-                    <p className="text-center fs-5">
-                      We build websites that build your business, Step inside
-                      the center of excellence where we build.
+                    /> */}
+                    <div className="text-center">
+                    <i class="bi bi-google-play fs-1 mx-1"></i>      
+                    <i class="bi bi-apple fs-1"></i>
+                                  </div>
+                    <p className="fs-5">
+                      Custom app development from design to deployment, bringing your ideas to life for engaged audiences.
                     </p>
                   </div>
                 </div>
@@ -83,18 +80,19 @@ function Service() {
               <div className="col-xl-4 px-2">
                 <div className="shadow-sm rounded">
                   <div className="px-3 py-3">
-                    <h1 className="text-center fs-4 fw-bold">
-                      Digital <span className="color">Marketing</span>
+                    <h1 className="fs-4 fw-bold">
+                      <span className="color">Digital </span>Marketing
                     </h1>
-                    <img
+                    {/* <img
                       src={require("../../../Image/seo.png")}
                       alt=""
                       className="img-fluid"
-                    />
-                    <p className="text-center fs-5">
-                      Creative solutions to improve your business, Prospects are
-                      people too. Marketing should be scientific, but never
-                      robotic
+                    /> */}
+                    <div className="text-center">
+                    <i class="bi bi-megaphone-fill fs-1"></i>
+                                        </div>
+                    <p className="fs-5">
+                      Innovative Strategies for Business Enhancement: Humanizing Marketing Efforts with Data-Driven Precision
                     </p>
                   </div>
                 </div>

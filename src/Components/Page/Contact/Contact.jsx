@@ -13,11 +13,11 @@ function Contact() {
     }, 2000);
   };
   return (
-    <>
-      <div className="container-fluid py-5 background-color">
+<>
+      <div className="container-fluid background-color">
         <div className="row">
-          <div className="col-xl-12 py-2">
-            <h1 className="fw-bold text-center AppDevelopment">
+          <div className="col-xl-12 py-3">
+            <h1 className="fw-bold text-center AppDevelopment display-6">
               Contact <span className="color">Us</span>
             </h1>
           </div>

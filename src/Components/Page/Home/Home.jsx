@@ -13,33 +13,31 @@ function Home() {
   }
   return (
     <>
-      <div className="container-fluid background-color py-5">
-        <div className="row justify-content-center py-3">
-          
-          <div className="col-xl-10 Content-center">
-            <div>
-              <h1 className="display-1 fw-bold">
-                Creative Digital Marketing <span className="color">Solution</span>
-                <hr />
-              </h1>
-              <p>
-                With Our Innovative Ideas In Website Designing & Development ,
-                We Deliver Every Single Project As It Is Our First And Best
-                Project Ever.
-              </p>
-              <button className="btn-style" onClick={GetSolution}>Get Solution</button>
+      <div className="container-fluid py-5 background-color">
+          <div className="row justify-content-center py-3">
+
+            <div className="col-xl-10 Content-center">
+              <div>
+                <h1 className="display-1 fw-bold">
+                <span className="color">Empowering</span> Your Digital Journey.
+
+                  <hr />
+                </h1>
+                <p>
+               <sub className="fs-2 color">"</sub> With our innovative approach, every project is treated as our first and best. We bring your vision to life with passion and expertise, delivering standout websites and apps that exceed expectations.<sub className="fs-2 color">"</sub>
+                </p>
+                <button className="btn-style">Get Solution</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
       <div className="container-fluid mt-5">
         <div className="row justify-content-center">
           <div className="col-xl-10">
             {" "}
             <h1 className="fw-bold text-center display-5">
               {" "}
-              <span className="color">WaveMantra</span> — Your Best
-              Collaboration Tool for Business
+              Optimize Your Business Collaboration with Our Top Tool
             </h1>
           </div>
           <div className="row py-3 justify-content-center">

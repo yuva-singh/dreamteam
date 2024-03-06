@@ -66,6 +66,15 @@ let newBlog = [
 function Blogs() {
   return (
      <>
+     <div className="container-fluid background-color">
+        <div className="row">
+          <div className="col-xl-12">
+            <h1 className="fw-bold text-center display-6 py-3">
+              Blo<span className="color">gs</span>
+            </h1>
+          </div>
+        </div>
+      </div>
         <div className="container mb-5">
           <div className="row justify-content-between py-3">
             {newBlog.map((data) => {
