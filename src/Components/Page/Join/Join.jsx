@@ -21,45 +21,20 @@ function Join() {
           </div>
         </div>
       </div>
-      <div className="container-fluid my-3">
+      <div className="container my-3">
         <div className="row justify-content-center">
-          <div className="col-xl-4 Content-center">
+          <div className="col-xl-12 Content-center">
             <div>
-              <Lottie animationData={webSiteDesign} loop={true} />
-            </div>
-          </div>
-          <div className="col-xl-6 Content-center">
-            <div>
-              <h1 className="fw-bold display-5">
+              <h1 className="fw-bold display-6">
                 Make Your <span className="color">Future</span> With us
               </h1>
 
               <p>
-                "Are you looking to join a dynamic and innovative IT company?
-                Look no further! We are currently seeking talented and motivated
-                individuals to join our team.
-              </p>
-              <p>
-                As a member of our team, you will have the opportunity to work
-                on cutting-edge technology and collaborate with a diverse group
-                of talented individuals. We offer a fast-paced and collaborative
-                work environment, as well as the opportunity for career growth
-                and development.
-              </p>
-              <p>
-                Our company values creativity, teamwork, and a passion for
-                technology. If you share these values and are ready for a
-                challenging and rewarding career, we encourage you to apply.
-              </p>
-              <p>
-                We offer competitive compensation and benefits packages, as well
-                as a flexible work schedule. So, if you're ready to take your
-                career to the next level, join us and be a part of something
-                great! Apply today."
+              Are you prepared to have a major effect in the digital area? Talented people who are enthusiastic about innovation and technology are always in demand at WaveMantra. If you are eager to work with a team on interesting projects in a fast-paced environment, we would love to talk with you. Look over the roles we have open and begin a rewarding career with us. Come define the future of web development with us at WaveMantra, where creativity and technology collide.
               </p>
             </div>
           </div>
-          <div className="col-xl-10 shadow-sm rounded py-3 mb-5">
+          <div className="col-xl-12 shadow-sm rounded py-3 mb-5">
             <h2 className="fw-bold">Contact Form</h2>
             <form onSubmit={joinData} action="https://formspree.io/f/mnqynbel" method="post">
               <div className="row justify-content-center">

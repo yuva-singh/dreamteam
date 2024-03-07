@@ -80,7 +80,7 @@ function Service() {
               <div className="col-xl-4 px-2">
                 <div className="shadow-sm rounded">
                   <div className="px-3 py-3">
-                    <h1 className="fs-4 fw-bold">
+                    <h1 className="fs-4 fw-bold text-center">
                       <span className="color">Digital </span>Marketing
                     </h1>
                     {/* <img

@@ -76,7 +76,7 @@ function Navbar() {
                       }`}
                     onClick={NavbarHandler}
                   >
-                    Who We Are
+                    About us
                   </Link>
                 </li>
                 <li class="nav-item">
@@ -86,7 +86,7 @@ function Navbar() {
                       }`}
                     onClick={NavbarHandler}
                   >
-                    What We Do
+                   Services
                   </Link>
                 </li>
                 <li class="nav-item">
@@ -116,7 +116,7 @@ function Navbar() {
                       }`}
                     onClick={NavbarHandler}
                   >
-                    Get In Touch
+                    Contact Us
                   </Link>
                 </li>
               </ul>
@@ -149,7 +149,7 @@ function Navbar() {
                   }`}
                 onClick={NavbarHandler}
               >
-                Who We Are
+                About Us
               </Link>
             </li>
             <li class="nav-item" data-bs-dismiss="offcanvas" aria-label="Close">
@@ -159,7 +159,7 @@ function Navbar() {
                   }`}
                 onClick={NavbarHandler}
               >
-                What We Do
+               Services
               </Link>
             </li>
             <li class="nav-item" data-bs-dismiss="offcanvas" aria-label="Close">
@@ -189,7 +189,7 @@ function Navbar() {
                   }`}
                 onClick={NavbarHandler}
               >
-                Get In Touch
+                Contact Us
               </Link>
             </li>
           </ul>

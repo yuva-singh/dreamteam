@@ -32,7 +32,7 @@ function Contact() {
           </div>
           <div className="col-xl-5">
             <h2 className="fw-bold py-3 display-5">Feel free to contact us or just say hi!</h2>
-            <form onSubmit={submitData} action="https://formspree.io/f/xbjelanp" method="post">
+            <form onSubmit={submitData} action="" method="post">
               <div className="mb-3">
                 <label htmlFor="exampleInputName" className="form-label">
                   Name
@@ -60,10 +60,11 @@ function Contact() {
                   Number
                 </label>
                 <input
-                  name="number"
-                  type="number"
+                  type="tel"
                   className="form-control"
                   id="exampleInputnumber"
+                  minLength={10}
+                  maxLength={10}
                 />
               </div>
               {/* <div className="mb-3">
@@ -100,7 +101,7 @@ function Contact() {
             <div className="p-4 text-center shadow-sm rounded">
               <i className="bi bi-telephone-fill  fs-2"></i>
               <div>
-                <a href="tel:+919319314403">(+91) 931-931-4403</a>
+                <a href="tel:+919319314403">(+91) 8700282172</a>
               </div>
             </div>
           </div>

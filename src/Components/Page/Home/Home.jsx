@@ -19,7 +19,7 @@ function Home() {
             <div className="col-xl-10 Content-center">
               <div>
                 <h1 className="display-1 fw-bold">
-                <span className="color">Empowering</span> Your Digital Journey.
+                <span className="color">Empowering</span> Your Digital Journey
 
                   <hr />
                 </h1>
@@ -84,7 +84,7 @@ function Home() {
       </div>
       <Service />
       <HomeAboutus />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Faq/>
     </>
   );
