@@ -34,7 +34,7 @@ function Navbar() {
     <>
       <div className="background-color">
         <LoadingBar
-          color='#7E7C73'
+          color='#D8B9A7'
           height={3.5}
           shadow={`0px 0px 10px #BFC2FF`}
           progress={progress}
