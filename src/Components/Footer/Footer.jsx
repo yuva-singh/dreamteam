@@ -39,7 +39,7 @@ function Footer() {
               <div className="col-xl-3">
                 <h4 className="fw-bold">Contact Us</h4>
                 <p> <i className="bi bi-geo-alt text-secondary"></i> Dwarka, New Delhi, 110043</p>
-                <p><i className="bi bi-telephone text-secondary"></i><a href="tel:+919319314403" className="text-dark">(+91) 8700282172</a></p>
+                <p><i className="bi bi-telephone text-secondary"></i><a href="tel:+918700282172" className="text-dark">(+91) 8700282172</a></p>
                 <p><i className="bi bi-envelope text-secondary"></i><a href="mailto:info@WaveMantra.com" className="text-dark"> info@WaveMantra.com</a></p>
                 <div className="d-flex">
                   <i className="bi bi-facebook  ions fs-4 text-primary"></i>
