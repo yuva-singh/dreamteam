@@ -1,9 +1,9 @@
 .color{
-  color: #D8B9A7;
+  color: #6c63ff;
 }
 
 .active-navbar{
-  border-bottom: 2px solid #D8B9A7;
+  border-bottom: 2px solid #6c63ff;
   display: flex;
   padding-bottom:0px !important;
 
@@ -11,7 +11,7 @@
   transition: ease-in-out 10ms;
 }
 .active-navbar-mobile{
-  color: #D8B9A7;
+  color: #6c63ff;
   transition: ease-in-out 10ms;
 }
 @media only screen and (min-width: 992px) {
