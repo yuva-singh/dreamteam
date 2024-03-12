@@ -69,8 +69,6 @@ const blogSlice = createSlice({
             .addCase(getBlog.fulfilled, (state, action) => {
                 state.status = 'succeeded';
                 state.blogs = action.payload;
-
-                
             })
             .addCase(getBlog.rejected, (state, action) => {
                 state.status = 'failed';
@@ -82,9 +80,8 @@ const blogSlice = createSlice({
             })
             .addCase(deleteBlogs.fulfilled, (state, action) => {
                 state.status = 'succeeded';
-                state.blogs = state.blogs.filter(blog => blog.deleteBlogs !== action.payload);
+                state.blogs = state.blogs.filter(blogs => blogs._id !== action.payload);
                 // state.status = 'idle'
-                // state.blogs = action.payload;
             })
             .addCase(deleteBlogs.rejected, (state, action) => {
                 state.status = 'failed';
