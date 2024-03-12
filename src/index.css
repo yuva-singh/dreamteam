@@ -127,3 +127,6 @@ a{
 .accordion{
   border: none !important;
 }
+.img-fit{
+  object-fit: cover;
+}

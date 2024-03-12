@@ -1,138 +1,58 @@
 import React, { useState, useRef } from "react";
 import JoditEditor from "jodit-react";
 import SIdemenu from "./SIdemenu";
-import axios from "axios";
-import SuccessMassage from "./SuccessMassage";
-import { useEffect } from "react";
-
+import {createBlog} from '../ReduxToolkit/Slice/Blog/BlogSlice'
+import {useDispatch } from "react-redux";
 function UploadBlog() {
-
-  // const [file, setFile] = useState();
-  // function onchageimghander(e) {
-  //   setFile(URL.createObjectURL(e.target.files[0]));
-  // }
-  // console.log(file);
-  // editor
+  const dispatch = useDispatch()
   const editor = useRef(null);
-  const [massage, setMassage] = useState("d-none")
-  // const history = useNavigate();  // const {image} = file;
-  const [blog, setblog] = useState({
-    name: "",
-    date: "",
-    slug: "",
-    meta: "",
-    metakeyword: "",
-    metadiscripation: "",
-    blogcategory: "",
-    subblogcategory: "",
-    content: "",
-    image: ""
-  });
+  const [blogTitle, setblogTitle] = useState("");
+  const [description, setdescription] = useState("");
+  const [slugUrl, setslugUrl] = useState("");
+  const [metaTitle, setmetaTitle] = useState("");
+  const [metaDescription, setmetaDescription] = useState("");
+  const [metaKeyword, setmetaKeyword] = useState("");
+  const [image, setimage] = useState("");
 
-  const {
-    name,
-    date,
-    slug,
-    meta,
-    metakeyword,
-    metadiscripation,
-    blogcategory,
-    subblogcategory,
-    content,
-    image
-  } = blog;
-
-  const oninputchange = (e) => {
-    setblog({ ...blog, [e.target.name]: e.target.value });
-  };
-  const onsubmitdata = async (e) => {
+  const onsubmitdata = async(e) => {
     e.preventDefault();
-    await axios.post("http://localhost:3003/blogs", blog);
-    // history("/");
-    setblog({
-      name: "",
-      date: "",
-      slug: "",
-      meta: "",
-      metakeyword: "",
-      metadiscripation: "",
-      blogcategory: "",
-      subblogcategory: "",
-      image: "",
-      content: "",
-    });
-    setMassage("")
-    setTimeout(() => {
-      setMassage("d-none");
-    }, 1500);
-
-  };
-  const [categoryData, setCategoryData] = useState([])
-  const CategoryData = async () => {
-    let apiData = await axios.get("http://localhost:3004/Navbar");
-    try {
-      setCategoryData(apiData.data)
-      console.log(apiData.data)
+        try {
+      const formData = new FormData();
+      formData.append("blogTitle", blogTitle);
+      formData.append("description", description);
+      formData.append("slugUrl", slugUrl);
+      formData.append("metaTitle", metaTitle);
+      formData.append("metaKeyword", metaKeyword);
+      formData.append("metaDescription", metaDescription);
+      formData.append("image", image);
+      console.log(formData)
+      dispatch(createBlog(formData ))
+      // setMassage("Blog created successfully!");
+      setblogTitle("");
+      setdescription("");
+      setslugUrl("");
+      setmetaTitle("");
+      setmetaKeyword("");
+      setmetaDescription("")
+      setimage(null);
     } catch (error) {
-      console.log(error)
+      // setMassage("Failed to create blog!");
+      console.error(error);
     }
-  };
-  useEffect(() => {
-    CategoryData();
-  }, [])
+  }
+
   return (
     <>
       <div className="container-fluid" style={{ zindex: "999px" }}>
         <div className="row justify-content-end">
           <SIdemenu />
-          <div className="col-lg-10" style={{height:"100vh",overflowY:"scroll"}}>
-            <h4 className="text-center">Blogs</h4>
+          <div className="col-lg-10" style={{ height: "100vh", overflowY: "scroll" }}>
+            <h5 className="text-center">upload Blogs</h5>
             <hr />
-            <SuccessMassage DisplayNone={massage} />
+         
             <form onSubmit={onsubmitdata}>
               <div className="row mb-3 px-5 py-2">
-                {/* <div className="col-md-6 mt-2">
-                  <label htmlFor="exampleInputEmail1" className="form-label">
-                    Blog Category
-                  </label>
-                  <div className="border rounded">
-                    <select
-                      className="form-select"
-                      aria-label="Default select example"
-                      name="blogcategory"
-                      value={blogcategory}
-                      onChange={oninputchange}
-                    >
-                      <option selected="select Category">select Category</option>
-                      {
-                        categoryData.map((data) => {
-                          return (
-                            <option value={data.Subcategory}>{data.category}</option>
-                          )
-                        })
-                      }
-                    </select>
-                  </div>
-                </div>
-                <div className="col-md-6 mt-2">
-                  <label htmlFor="exampleInputEmail1" className="form-label">
-                    Blog Category
-                  </label>
-                  <div className="border rounded">
-                    <select
-                      className="form-select"
-                      aria-label="Default select example"
-                      name="subblogcategory"
-                      value={subblogcategory}
-                      onChange={oninputchange}
-                    >
-                      <option selected="">Sub category</option>
-                      <option value="Apple">Apple</option>
-                      <option value="Mango">Mango</option>
-                      <option value="Banana">Banana</option>
-                    </select>
-                  </div>
-                </div> */}
+                
                 <div className="col-md-6 mt-2">
                   <label htmlFor="exampleInputEmail1" className="form-label">
                     Blog Title
@@ -144,11 +64,11 @@ function UploadBlog() {
                     placeholder="blog title"
                     aria-describedby="emailHelp"
                     name="name"
-                    value={name}
-                    onChange={oninputchange}
+                    value={blogTitle}
+                    onChange={(e)=>setblogTitle(e.target.value)}
                   />
                 </div>
-                
+
                 <div className="col-md-6 mt-2">
                   <label htmlFor="exampleInputEmail1" className="form-label">
                     Slug Url
@@ -160,8 +80,8 @@ function UploadBlog() {
                     placeholder="Enter Slug Url"
                     aria-describedby="emailHelp"
                     name="slug"
-                    value={slug}
-                    onChange={oninputchange}
+                    value={slugUrl}
+                    onChange={(e)=>setslugUrl(e.target.value)}
                   />
                 </div>
                 <div className="col-md-6 mt-2">
@@ -175,8 +95,9 @@ function UploadBlog() {
                     placeholder="Meta Title"
                     aria-describedby="emailHelp"
                     name="meta"
-                    value={meta}
-                    onChange={oninputchange}
+                    value={metaTitle}
+                    onChange={(e)=>setmetaTitle(e.target.value)}
+
                   />
                 </div>
                 <div className="col-md-6 mt-2">
@@ -190,8 +111,8 @@ function UploadBlog() {
                     placeholder="Enter Metakeyword"
                     aria-describedby="emailHelp"
                     name="metakeyword"
-                    value={metakeyword}
-                    onChange={oninputchange}
+                    value={metaKeyword}
+                    onChange={(e)=>setmetaKeyword(e.target.value)}
                   />
                 </div>
                 <div className="col-md-6 mt-2">
@@ -205,8 +126,8 @@ function UploadBlog() {
                     placeholder="Enter Meta Description"
                     aria-describedby="emailHelp"
                     name="metadiscripation"
-                    value={metadiscripation}
-                    onChange={oninputchange}
+                    value={metaDescription}
+                    onChange={(e)=>setmetaDescription(e.target.value)}
                   />
                 </div>
                 <div className="col-md-6 mt-2">
@@ -218,27 +139,24 @@ function UploadBlog() {
                     className="form-control"
                     id="exampleInputEmail1"
                     aria-describedby="emailHelp"
-                  name="image"
-                  value={image}
-                  onChange={oninputchange}
+                    name="image"
+                    // value={image}
+                    onChange={(e)=>setimage(e.target.files[0])}
                   />
                 </div>
                 <div className="mb-3 col-md-12 mt-2">
                   <label htmlFor="">Discription</label>
                   <JoditEditor
                     ref={editor}
-                    // name="content"
-                    value={content}
-                    // setblog={setblog}
-                    tabIndex={1} // tabIndex of textarea
-                    // onBlur={newContent => setblog(newContent)} // preferred to use only this option to update the content for performance reasons
-                    onChange={content => setblog(content)}
-
+                    name="content"
+                    value={description}
+                    tabIndex={1}
+                    onChange={content => setdescription(content)}
                   />
                 </div>
               </div>
               <div className="col-md-6 d-grid gap-2 px-5">
-                <button className="btn btn-dark fw-bold">UPLOAD</button>
+                <button className="btn btn-dark fw-bold" type="submit">UPLOAD</button>
               </div>
             </form>
           </div>
@@ -246,6 +164,7 @@ function UploadBlog() {
       </div>
     </>
   );
+
 }
 
 export default UploadBlog;

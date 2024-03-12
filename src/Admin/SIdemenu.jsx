@@ -1,7 +1,14 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+
 
 function SIdemenu() {
+    const history = useNavigate();
+    const logout = () => {
+        localStorage.removeItem("token");
+        history("/admin")
+    }
     return (
         <>
             <div className="col-lg-2 d-flex flex-column bg-dark flex-shrink-0 p-3 bg-light" style={{ height: "100vh" }}>
@@ -10,22 +17,23 @@ function SIdemenu() {
                 <hr />
                 <ul className="nav nav-pills flex-column mb-auto">
                     <li className=''>
-                        <NavLink to="/dashboard" className={({isActive})=>`nav-link text-light ${isActive ? "bg-light text-dark" : ""}`} >
+                        <NavLink to="/dashboard" className={({ isActive }) => `nav-link text-light ${isActive ? "bg-light text-dark" : ""}`} >
                             <i className="bi bi-speedometer2" />{" "}
                             Dashboard
                         </NavLink>
                     </li>
 
+                   
                     <li>
-                        <NavLink to="/UploadBlog" className={({isActive})=>`nav-link text-light ${isActive ? "bg-light text-dark" : ""}`}>
-                            <i className="bi bi-plus-circle" />{" "}
-                            Upload Blog
+                        <NavLink to="/viewblog" className={({ isActive }) => `nav-link text-light ${isActive ? "bg-light text-dark" : ""}`}>
+                            <i className="bi bi-grid-fill" />{" "}
+                            Blogs
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/viewblog" className={({isActive})=>`nav-link text-light ${isActive ? "bg-light text-dark" : ""}`}>
-                            <i className="bi bi-grid-fill" />{" "}
-                             Blogs
+                        <NavLink to="/UploadBlog" className={({ isActive }) => `nav-link text-light ${isActive ? "bg-light text-dark" : ""}`}>
+                            <i className="bi bi-plus-circle" />{" "}
+                            Upload Blog
                         </NavLink>
                     </li>
                 </ul>
@@ -56,15 +64,12 @@ function SIdemenu() {
                             <hr className="dropdown-divider" />
                         </li>
                         <li>
-                            <NavLink className="dropdown-item" to="/">
-                                logout
-                            </NavLink>
+                            <NavLink className='dropdown-item' to={"/admin"} onClick={logout}>logout</NavLink>
                         </li>
                     </ul>
                 </div>
             </div>
         </>
-
     )
 }
 
