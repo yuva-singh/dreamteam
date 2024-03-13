@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 function ViewBlog() {
   const dispatch = useDispatch();
-  const { blogs, status, error, message } = useSelector((state) => state.blog)
+  const { blogs, status, error } = useSelector((state) => state.blog)
   useEffect(() => {
     dispatch(getBlog())
   }, [])
@@ -23,7 +23,7 @@ function ViewBlog() {
       <div className="row justify-content-end">
         <SIdemenu />
         <div className="col-lg-10 border p-5" style={{ height: "100vh", overflowY: "scroll" }}>
-          <h5>Blogs ({blogs.length})</h5>
+          <h5>Blogs ({blogs.blogs.length})</h5>
           <table className="table">
             <thead>
               <tr className="bg-dark text-white">
@@ -47,7 +47,7 @@ function ViewBlog() {
                 </tr>
               )}
               {status === "succeeded" && (
-                blogs.map((data, index) => {
+                blogs.blogs.map((data, index) => {
                   const { blogTitle, image, status, _id, createdAt } = data;
                   const newdate = new Date(createdAt);
                   // Convert the date to a more readable format "day, month, year"
