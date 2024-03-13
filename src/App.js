@@ -17,12 +17,13 @@ import ViewBlog from "./Admin/ViewBlog";
 import AdminNavbar from "./Admin/AdminNavbar";
 import Login from "./Admin/Login";
 import PrivateRoute from "./PrivateRoute";
+import EditBlog from "./Admin/EditBlog";
 
 let App = () => {
   const location = useLocation();
 
   // Define routes where Navbar and Footer should not be displayed
-  const adminRoutes = ['/admin', '/AdminNavbar', '/UploadBlog', '/viewblog', '/dashboard'];
+  const adminRoutes = ['/admin', '/AdminNavbar', '/UploadBlog', '/viewblog', '/dashboard', '/editblog'];
 
   // Check if the current route is an admin route
   const isAdminRoute = adminRoutes.some(route => location.pathname.startsWith(route));
@@ -35,7 +36,7 @@ let App = () => {
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="blog" element={<Blogs />} />
-        <Route path="BlogSinglePage" element={<BlogSinglePage />} />
+        <Route path="BlogSinglePage/:id" element={<BlogSinglePage />} />
         <Route path="services" element={<ServicePage />} />
         <Route path="Join" element={<Join />} />
         <Route path="contact" element={<Contact />} />
@@ -45,6 +46,7 @@ let App = () => {
         <Route path='/dashboard' element={<PrivateRoute Component={Admin} />}></Route>
         <Route path='/AdminNavbar' element={<PrivateRoute Component={AdminNavbar} />}></Route>
         <Route path='/UploadBlog' element={<PrivateRoute Component={UploadBlog} />}></Route>
+        <Route path='/editblog/:id' element={<PrivateRoute Component={EditBlog} />}></Route>
         <Route path='/ViewBlog' element={<PrivateRoute Component={ViewBlog} />}></Route>
         {/* login */}
       </Routes>

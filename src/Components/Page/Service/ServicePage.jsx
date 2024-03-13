@@ -16,10 +16,9 @@ function ServicePage() {
       <div className="container-fluid">
         <div className="row my-5 justify-content-center py-3 px-2">
           <div className="col-xl-10 mb-3">
-          <h1 className="display-5 fw-bold text-center">
-          Our journey together starts by asking what success looks and feels
-          like for you
-        </h1>
+            <h1 className="display-5 fw-bold text-center">
+              We begin our journey together by getting a sense of your definition and experience of success.
+            </h1>
           </div>
           <div className="col-xl-5">
             <div>
@@ -29,37 +28,35 @@ function ServicePage() {
                 height="90px"
                 width="auto"
               />
-              <h1 className="fw-bold fs-3">Creative & Digital Strategy</h1>
+              <h1 className="fw-bold fs-3">The Creative and Digital Approach</h1>
               <p>
                 {" "}
-                <i className="bi bi-check-circle color"></i> Brand Identity
+                <i className="bi bi-check-circle color"></i> Branding
               </p>
               <p>
                 {" "}
-                <i className="bi bi-check-circle color"></i> Brand Strategy
+                <i className="bi bi-check-circle color"></i>  Innovative Services
               </p>
               <p>
                 {" "}
-                <i className="bi bi-check-circle color"></i> Creative Services
+                <i className="bi bi-check-circle color"></i>  Inside-Out Campaigns
+
               </p>
               <p>
                 {" "}
-                <i className="bi bi-check-circle color"></i> Internal Campaigns
+                <i className="bi bi-check-circle color"></i> Designing Logos
+
               </p>
               <p>
                 {" "}
-                <i className="bi bi-check-circle color"></i> Logo Designing
+                <i className="bi bi-check-circle color"></i> Creative Management for Social Media
               </p>
               <p>
                 {" "}
-                <i className="bi bi-check-circle color"></i> Social Media
-                Creative Management
+                <i className="bi bi-check-circle color"></i> Graphic and Brand Design
+
               </p>
-              <p>
-                {" "}
-                <i className="bi bi-check-circle color"></i> Visual & Brand
-                Design
-              </p>
+
             </div>
           </div>
           <div className="col-xl-4 Content-center">
@@ -82,38 +79,34 @@ function ServicePage() {
                 height="100px"
                 width="auto"
               />
-              <h1 className="fw-bold fs-3">Media Planning & Buying</h1>
+              <h1 className="fw-bold fs-3">Planning and Purchasing for Media</h1>
               <p>
                 {" "}
-                <i className="bi bi-check-circle color"></i> Digital Media
-                Planning & Buying
+                <i className="bi bi-check-circle color"></i> Digital Media Purchasing and Planning
               </p>
               <p>
                 {" "}
-                <i className="bi bi-check-circle color"></i> Programmatic
-                Solutions
+                <i className="bi bi-check-circle color"></i> Programming Solutions
               </p>
               <p>
                 {" "}
-                <i className="bi bi-check-circle color"></i> Digital Lead
-                Management
+                <i className="bi bi-check-circle color"></i>Digital Lead Generation
               </p>
               <p>
                 {" "}
-                <i className="bi bi-check-circle color"></i> SMS marketing
+                <i className="bi bi-check-circle color"></i> SMS advertising
               </p>
               <p>
                 {" "}
-                <i className="bi bi-check-circle color"></i> Paid Social Media
+                <i className="bi bi-check-circle color"></i> Sponsored Social Media
               </p>
               <p>
                 {" "}
-                <i className="bi bi-check-circle color"></i> Email Campaigns
+                <i className="bi bi-check-circle color"></i> Email-Based Campaigns
               </p>
               <p>
                 {" "}
-                <i className="bi bi-check-circle color"></i> Mobile Media
-                Strategy
+                <i className="bi bi-check-circle color"></i> Strategy for Mobile Media
               </p>
             </div>
           </div>
@@ -137,35 +130,28 @@ function ServicePage() {
                 height="80px"
                 width="auto"
               />
-              <h1 className="fw-bold fs-3">Analytics & SEO</h1>
+              <h1 className="fw-bold fs-3">Analytical Tools and SEO Strategies</h1>
               <p>
                 {" "}
-                <i className="bi bi-check-circle color"></i> Seo Strategy
+                <i className="bi bi-check-circle color"></i> Examination of Websites
               </p>
               <p>
                 {" "}
-                <i className="bi bi-check-circle color"></i> Website Analysis
+                <i className="bi bi-check-circle color"></i> Research on Keywords and Rivals
               </p>
               <p>
                 {" "}
-                <i className="bi bi-check-circle color"></i> Keyword And
-                Competitor Research
+                <i className="bi bi-check-circle color"></i> Sem Strategy Using Chosen Keywords
               </p>
               <p>
                 {" "}
-                <i className="bi bi-check-circle color"></i> Sem Strategy With
-                Keyword Selection
+                <i className="bi bi-check-circle color"></i> Campaign Management for Google Adwords
               </p>
               <p>
                 {" "}
-                <i className="bi bi-check-circle color"></i> Google Adwords
-                Campaign Management
+                <i className="bi bi-check-circle color"></i>  Advertising in Context
               </p>
-              <p>
-                {" "}
-                <i className="bi bi-check-circle color"></i> Contextual
-                Advertising
-              </p>
+
             </div>
           </div>
           <div className="col-xl-4 Content-center">
@@ -189,54 +175,46 @@ function ServicePage() {
                 width="auto"
               />
               <h1 className="fw-bold fs-3">
-                Branding & Digital Communications
+                Digital communications and branding
+                Internet Promotion
+
               </h1>
               <p>
                 {" "}
-                <i className="bi bi-check-circle color"></i> Online Advertising
+                <i className="bi bi-check-circle color"></i> Social Media Supervision
               </p>
               <p>
                 {" "}
-                <i className="bi bi-check-circle color"></i> Social Media
-                Management
+                <i className="bi bi-check-circle color"></i> Digital Methods
               </p>
               <p>
                 {" "}
-                <i className="bi bi-check-circle color"></i> Digital Strategy
+                <i className="bi bi-check-circle color"></i>  Methods for Search Engine Optimization
+
               </p>
               <p>
                 {" "}
-                <i className="bi bi-check-circle color"></i> Search Engine
-                Strategy
+                <i className="bi bi-check-circle color"></i> Marketing of Content
               </p>
               <p>
                 {" "}
-                <i className="bi bi-check-circle color"></i> Content Marketing
+                <i className="bi bi-check-circle color"></i> Management of Online Reputation
+
               </p>
               <p>
                 {" "}
-                <i className="bi bi-check-circle color"></i> Online Reputation
-                Management
+                <i className="bi bi-check-circle color"></i>  Email Promotion
+
               </p>
               <p>
                 {" "}
-                <i className="bi bi-check-circle color"></i> Marketing
-                Automation
+                <i className="bi bi-check-circle color"></i> Management of Paid Media
               </p>
               <p>
                 {" "}
-                <i className="bi bi-check-circle color"></i> Email Marketing
+                <i className="bi bi-check-circle color"></i> Advertisement through Programmatic
               </p>
-              <p>
-                {" "}
-                <i className="bi bi-check-circle color"></i> Paid Media
-                Management
-              </p>
-              <p>
-                {" "}
-                <i className="bi bi-check-circle color"></i> Programmatic
-                Advertising
-              </p>
+
             </div>
           </div>{" "}
           <div className="col-xl-4 Content-center">
@@ -260,57 +238,51 @@ function ServicePage() {
                 width="auto"
               />
               <h1 className="fw-bold fs-3">
-                Web Design & Development | Website UI/UX
+                Creative Static Websites | Website UI/UX | Web Design & Development
+
               </h1>
               <p>
                 {" "}
-                <i className="bi bi-check-circle color"></i> Creative Static
-                Websites
+                <i className="bi bi-check-circle color"></i> Lively Web Pages
+
               </p>
               <p>
                 {" "}
-                <i className="bi bi-check-circle color"></i> Dynamic Websites
+                <i className="bi bi-check-circle color"></i> Solutions for E-Commerce
               </p>
               <p>
                 {" "}
-                <i className="bi bi-check-circle color"></i> E-Commerce
-                Solutions
+                <i className="bi bi-check-circle color"></i> Solutions for UI/UX
               </p>
               <p>
                 {" "}
-                <i className="bi bi-check-circle color"></i> UI/UX Solutions
+                <i className="bi bi-check-circle color"></i>Design of Landing Pages
+
               </p>
               <p>
                 {" "}
-                <i className="bi bi-check-circle color"></i> CMS Development
+                <i className="bi bi-check-circle color"></i> Applications for Mobile
+
+
               </p>
               <p>
                 {" "}
-                <i className="bi bi-check-circle color"></i> Landing Page Design
+                <i className="bi bi-check-circle color"></i> API-Based Connectivity
               </p>
               <p>
                 {" "}
-                <i className="bi bi-check-circle color"></i> Mobile Applications
+                <i className="bi bi-check-circle color"></i> Designing Inclusive Experiences
+
               </p>{" "}
               <p>
                 {" "}
-                <i className="bi bi-check-circle color"></i> API Based
-                Integrations
+                <i className="bi bi-check-circle color"></i> Configuring a Blog
               </p>{" "}
               <p>
                 {" "}
-                <i className="bi bi-check-circle color"></i> Intuitive
-                Experience Design
+                <i className="bi bi-check-circle color"></i> Community-Oriented Websites
               </p>
-              <p>
-                {" "}
-                <i className="bi bi-check-circle color"></i> Blog Setup
-              </p>
-              <p>
-                {" "}
-                <i className="bi bi-check-circle color"></i> Community Based
-                Sites
-              </p>
+
             </div>
           </div>
           <div className="col-xl-4 Content-center">

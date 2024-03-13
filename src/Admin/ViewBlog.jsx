@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import SIdemenu from './SIdemenu'
 import { useDispatch, useSelector, } from 'react-redux';
 import { getBlog, deleteBlogs } from '../ReduxToolkit/Slice/Blog/BlogSlice';
+import { Link } from 'react-router-dom';
 
 function ViewBlog() {
   const dispatch = useDispatch();
@@ -21,7 +22,7 @@ function ViewBlog() {
     <div className="container-fluid">
       <div className="row justify-content-end">
         <SIdemenu />
-        <div className="col-lg-10 border p-5" style={{ height: "100vh", overflowY: "scroll" }}> 
+        <div className="col-lg-10 border p-5" style={{ height: "100vh", overflowY: "scroll" }}>
           <h5>Blogs ({blogs.length})</h5>
           <table className="table">
             <thead>
@@ -40,7 +41,7 @@ function ViewBlog() {
                   <td colSpan={6}>Loading </td>
                 </tr>
               )}
-               {status === "failed" && (
+              {status === "failed" && (
                 <tr>
                   <td colSpan={6}>{error}</td>
                 </tr>
@@ -48,6 +49,13 @@ function ViewBlog() {
               {status === "succeeded" && (
                 blogs.map((data, index) => {
                   const { blogTitle, image, status, _id, createdAt } = data;
+                  const newdate = new Date(createdAt);
+                  // Convert the date to a more readable format "day, month, year"
+                  const formattedDate = newdate.toLocaleDateString("default", {
+                    day: "2-digit",
+                    month: "long",
+                    year: "numeric"
+                  });
                   return (
                     <tr key={_id}>
                       <th scope="row">
@@ -59,10 +67,11 @@ function ViewBlog() {
 
                         className='rounded-circle img-fit' alt="" /> : <img src={require('../Image/intranet-icon.svg')} className='img-fluid' alt="" />}</td>
                       <td>{blogTitle}</td>
-                      <td>{createdAt}</td>
-                      <td>{status ? "true" :"false"}</td>
+                      <td>{formattedDate}</td>
+                      <td>{status ? "true" : "false"}</td>
                       <td>
-                        <i className='bi bi-archive-fill text-danger fs-4 ' onClick={() => deleteBlog(_id)} style={{ cursor: "pointer" }}></i>
+                        <Link to={`/editblog/${_id}`}><i className='bi bi-pencil-square fs-4'></i></Link>
+                        <i className='bi bi-archive-fill text-danger fs-4 mx-1' onClick={() => deleteBlog(_id)} style={{ cursor: "pointer" }}></i>
                       </td>
                     </tr>
                   )
