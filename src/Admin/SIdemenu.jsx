@@ -11,29 +11,29 @@ function SIdemenu() {
     }
     return (
         <>
-            <div className="col-lg-2 d-flex flex-column  flex-shrink-0 p-3 background-color" style={{ height: "100vh" }}>
-                <h1>                    <span className="fs-4">WaveMantra</span>
-                </h1>
+            <div className="col-lg-2 col-5 p-3 background-color-admin" style={{ height: "100vh" }}>
+                <>                    <span className="fs-4"><span className='color fw-bold'>W</span>aveMantra</span>
+                </>
                 <hr />
                 <ul className="nav nav-pills flex-column mb-auto">
                     <li className=''>
-                        <NavLink to="/dashboard" className={({ isActive }) => `nav-link text-dark ${isActive ? "bg-light text-dark" : ""}`} >
+                        <NavLink to="/dashboard" className={({ isActive }) => `nav-link text-dark ${isActive ? "menucolor" : ""}`} >
                             <i className="bi bi-speedometer2" />{" "}
                             Dashboard
                         </NavLink>
                     </li>
 
-                   
+
                     <li>
-                        <NavLink to="/viewblog" className={({ isActive }) => `nav-link text-dark ${isActive ? "bg-light text-dark" : ""}`}>
+                        <NavLink to="/viewblog" className={({ isActive }) => `nav-link text-dark ${isActive ? "menucolor" : ""}`}>
                             <i className="bi bi-grid-fill" />{" "}
                             Blogs
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/UploadBlog" className={({ isActive }) => `nav-link text-dark ${isActive ? "bg-light text-dark" : ""}`}>
+                        <NavLink to="/UploadBlog" className={({ isActive }) => `nav-link text-dark ${isActive ? "menucolor" : ""}`}>
                             <i className="bi bi-plus-circle" />{" "}
-                            Upload Blog
+                            Upload
                         </NavLink>
                     </li>
                 </ul>
@@ -41,7 +41,7 @@ function SIdemenu() {
                 <div className="dropdown">
                     <NavLink
                         to="/"
-                        className="d-flex align-items-center text-light  text-decoration-none dropdown-toggle"
+                        className="d-flex align-items-center text-dark  text-decoration-none dropdown-toggle"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
                     >
@@ -52,9 +52,9 @@ function SIdemenu() {
                             height={32}
                             className="rounded-circle me-2"
                         /> */}
-                        WaveMantra Admin
+                        Master Admin
                     </NavLink>
-                    <ul className="dropdown-menu text-small shadow">
+                    <ul className="dropdown-menu text-small  shadow">
                         <li>
                             <NavLink className="dropdown-item" to="/">
                                 Settings

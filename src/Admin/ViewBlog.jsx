@@ -22,14 +22,18 @@ function ViewBlog() {
     <div className="container-fluid">
       <div className="row justify-content-end">
         <SIdemenu />
-        <div className="col-lg-10 border p-5" style={{ height: "100vh", overflowY: "scroll" }}>
-          <h5>Blogs ({blogs.blogs.length})</h5>
-          <table className="table">
+        <div className="col-lg-10 col-7 border" style={{ height: "100vh", overflowY: "scroll" }}>
+          
+          <div className="row">
+          <div className="background-color-admin py-3 shadow-sm"><h5>Blogs ({blogs.blogs.length})</h5></div>
+          </div>
+         <div className='table-responsive'>
+         <table className="table my-3">
             <thead>
               <tr className="bg-dark text-white">
                 <th scope="col">s.no</th>
                 <th scope="col">Thumbnail</th>
-                <th scope="col">Blog name</th>
+                <th scope="col">Title</th>
                 <th scope="col">date</th>
                 <th scope="col">Status</th>
                 <th scope="col">Action</th>
@@ -71,7 +75,9 @@ function ViewBlog() {
                       <td>{status ? "true" : "false"}</td>
                       <td>
                         <Link to={`/editblog/${_id}`}><i className='bi bi-pencil-square fs-4'></i></Link>
-                        <i className='bi bi-archive-fill text-danger fs-4 mx-1' onClick={() => deleteBlog(_id)} style={{ cursor: "pointer" }}></i>
+                       <div>
+                       <i className='bi bi-archive-fill text-danger fs-4' onClick={() => deleteBlog(_id)} style={{ cursor: "pointer" }}></i>
+                       </div>
                       </td>
                     </tr>
                   )
@@ -79,6 +85,7 @@ function ViewBlog() {
               )}
             </tbody>
           </table>
+         </div>
         </div>
       </div>
     </div>

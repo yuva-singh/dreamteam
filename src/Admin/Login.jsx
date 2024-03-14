@@ -40,10 +40,11 @@ function Login() {
       </div>}
       <div className="container-fluid login">
         <div className="row justify-content-center">
-          <div className="col-md-4 margin">
+          <div className="col-md-4 margin bg-white rounded shadow">
             <main className="form-signin">
               <form onSubmit={formdata}>
-                <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
+              <h1 className="my-3 text-center"><span className="fw-bold color">W</span>aveMantra</h1>
+              <h1 className="h3 text-center">Login</h1>
                 <div className="form-floating">
                   <input
                     type="email"
@@ -72,8 +73,8 @@ function Login() {
                     me
                   </label>
                 </div> */}
-                <button className="w-100 btn btn-lg background-color border" type="submit">{
-                  status === "loading" && "succeeded" ? <div className="spinner-border spinner-border-sm disabled text-dark" style={{ color: "#1976D2" }} role="status">
+                <button className="w-100 btn btn-lg border my-3 text-white" style={{backgroundColor:"#6c63ff"}} type="submit">{
+                  status === "loading" && "succeeded" ? <div className="spinner-border spinner-border-sm disabled text-white" style={{ color: "#1976D2" }} role="status">
                     <span className="visually-hidden">Loading...</span>
                   </div> : "Login"
                 }</button>

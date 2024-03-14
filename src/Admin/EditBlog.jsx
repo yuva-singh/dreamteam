@@ -65,12 +65,13 @@ function EditBlog() {
             <div className="container-fluid" style={{ zindex: "999px" }}>
                 <div className="row justify-content-end">
                     <SIdemenu />
-                    <div className="col-lg-10" style={{ height: "100vh", overflowY: "scroll" }}>
-                        <h5 className="text-center">upload Blogs</h5>
-                        <hr />
+                    <div className="col-lg-10 col-7" style={{ height: "100vh", overflowY: "scroll" }}>
+                     <div className="row">
+                     <div className="background-color-admin py-3 shadow-sm"><h5 className="">Edit Blog</h5></div>
+                     </div>
 
                         <form onSubmit={onsubmitdata}>
-                            <div className="row mb-3 px-5 py-2">
+                            <div className="row  px-1 py-2">
 
                                 <div className="col-md-6 mt-2">
                                     <label htmlFor="exampleInputEmail1" className="form-label">
@@ -174,8 +175,8 @@ function EditBlog() {
                                     />
                                 </div>
                             </div>
-                            <div className="col-md-6 d-grid gap-2 px-5">
-                                <button className="btn background-color border" type="submit">UPLOAD</button>
+                            <div className="col-md-6 d-grid gap-2">
+                                <button className="btn btn-dark" type="submit">UPLOAD</button>
                             </div>
                         </form>
                     </div>
