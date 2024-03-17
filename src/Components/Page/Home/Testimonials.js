@@ -62,7 +62,7 @@ function Testimonials() {
               {content.map((index) => (
                 <div className="item background" key={index.id}>
                   <div className="text-center ">
-                  {/* <img src={require("../../../Image/userimage.png")} alt="" width="32" height="32" class="rounded-circle me-2"/> */}
+                  {/* <img src={require("../../../Image/userimage.png")} alt="" width="32" height="32" className="rounded-circle me-2"/> */}
                     <div className="bi bi-person-circle display-1"></div>
                     <div className="color">{index.heading}</div>    
                   </div>

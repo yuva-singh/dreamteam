@@ -49,7 +49,7 @@ function Service() {
                       className="img-fluid"
                     /> */}
                     <div className="text-center">
-                    <i class="bi bi-browser-chrome fs-1"></i>                    </div>
+                    <i className="bi bi-browser-chrome fs-1"></i>                    </div>
                     <p className="fs-5">
                       Expert web development services tailored to your needs. Elevate your online presence with our cutting-edge solutions.
                     </p>
@@ -68,8 +68,8 @@ function Service() {
                       className="img-fluid"
                     /> */}
                     <div className="text-center">
-                    <i class="bi bi-google-play fs-1 mx-1"></i>      
-                    <i class="bi bi-apple fs-1"></i>
+                    <i className="bi bi-google-play fs-1 mx-1"></i>      
+                    <i className="bi bi-apple fs-1"></i>
                                   </div>
                     <p className="fs-5">
                       Custom app development from design to deployment, bringing your ideas to life for engaged audiences.
@@ -89,7 +89,7 @@ function Service() {
                       className="img-fluid"
                     /> */}
                     <div className="text-center">
-                    <i class="bi bi-megaphone-fill fs-1"></i>
+                    <i className="bi bi-megaphone-fill fs-1"></i>
                                         </div>
                     <p className="fs-5">
                       Innovative Strategies for Business Enhancement: Humanizing Marketing Efforts with Data-Driven Precision

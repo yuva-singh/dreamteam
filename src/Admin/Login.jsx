@@ -34,7 +34,7 @@ function Login() {
   return (
     <>
       {status === 'failed' && <div className="position-fixed text-center my-md-3 my-4">
-        <div class="alert alert-danger" role="alert">
+        <div className="alert alert-danger" role="alert">
           {error == null ? "Admin not found! please try again leter" : error}
         </div>
       </div>}

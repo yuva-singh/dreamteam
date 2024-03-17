@@ -4,7 +4,8 @@ import SIdemenu from './SIdemenu'
 import { useDispatch, useSelector, } from 'react-redux';
 import { getBlog, deleteBlogs } from '../ReduxToolkit/Slice/Blog/BlogSlice';
 import { Link } from 'react-router-dom';
-
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 function ViewBlog() {
   const dispatch = useDispatch();
   const { blogs, status, error } = useSelector((state) => state.blog)
@@ -25,7 +26,9 @@ function ViewBlog() {
         <div className="col-lg-10 col-7 border" style={{ height: "100vh", overflowY: "scroll" }}>
           
           <div className="row">
-          <div className="background-color-admin py-3 shadow-sm"><h5>Blogs ({blogs.blogs.length})</h5></div>
+          <div className="background-color-admin py-3 shadow-sm"><h5>Blogs (
+            {blogs.blogs.length}
+            )</h5></div>
           </div>
          <div className='table-responsive'>
          <table className="table my-3">
@@ -42,7 +45,10 @@ function ViewBlog() {
             <tbody>
               {status === "loading" && (
                 <tr>
-                  <td colSpan={6}>Loading </td>
+                  <td colSpan={6}>
+                  <Skeleton count={10} height={80} />
+                     </td>
+
                 </tr>
               )}
               {status === "failed" && (

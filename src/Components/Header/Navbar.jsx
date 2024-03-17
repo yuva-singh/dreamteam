@@ -39,14 +39,14 @@ function Navbar() {
           shadow={`0px 0px 10px #BFC2FF`}
           progress={progress}
         />
-        <nav class="navbar navbar-expand-lg">
-          <div class="container">
-            <Link to='/' class="navbar-brand" href="#">
+        <nav className="navbar navbar-expand-lg">
+          <div className="container">
+            <Link to='/' className="navbar-brand" href="#">
               {/* <img src={logo} alt="" /> */}
               <h2><span className="display-6 color fw-bold">W</span>ave<span>M</span>antra</h2>
             </Link>
             <button
-              class="navbar-toggler d-none"
+              className="navbar-toggler d-none"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarNav"
@@ -54,12 +54,12 @@ function Navbar() {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <span class="navbar-toggler-icon"></span>
+              <span className="navbar-toggler-icon"></span>
             </button>
             <i className="bi bi-list d-md-none fs-2" data-bs-toggle="offcanvas" href="#offcanvasExample" aria-controls="offcanvasExample"></i>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav">
-                <li class="nav-item">
+                <li className="nav-item">
                   <Link
                     to="/"
                     className={`nav-link ${location.pathname === "/" ? "active-navbar" : ""
@@ -69,7 +69,7 @@ function Navbar() {
                     Home
                   </Link>
                 </li>
-                <li class="nav-item">
+                <li className="nav-item">
                   <Link
                     to="/about"
                     className={`nav-link ${location.pathname === "/about" ? "active-navbar" : ""
@@ -79,7 +79,7 @@ function Navbar() {
                     About us
                   </Link>
                 </li>
-                <li class="nav-item">
+                <li className="nav-item">
                   <Link
                     to="/services"
                     className={`nav-link ${location.pathname === "/services" ? "active-navbar" : ""
@@ -89,7 +89,7 @@ function Navbar() {
                    Services
                   </Link>
                 </li>
-                <li class="nav-item">
+                <li className="nav-item">
                   <Link
                     to="/join"
                     className={`nav-link ${location.pathname === "/join" ? "active-navbar" : ""
@@ -99,7 +99,7 @@ function Navbar() {
                     Join Us
                   </Link>
                 </li>
-                <li class="nav-item">
+                <li className="nav-item">
                   <Link
                     to="/blog"
                     className={`nav-link ${location.pathname === "/blog" ? "active-navbar" : ""
@@ -109,7 +109,7 @@ function Navbar() {
                     Blog
                   </Link>
                 </li>
-                <li class="nav-item">
+                <li className="nav-item">
                   <Link
                     to="/contact"
                     className={`nav-link ${location.pathname === "/contact" ? "active-navbar" : ""
@@ -125,14 +125,14 @@ function Navbar() {
           </div>
         </nav>
       </div>
-      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style={{ width: "280px" }}>
-        <div class="offcanvas-header">
+      <div className="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style={{ width: "280px" }}>
+        <div className="offcanvas-header">
         <h2><span className="display-6 color fw-bold">W</span>ave<span>M</span>antra</h2>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body">
+        <div className="offcanvas-body">
           <ul className="navbar-nav">
-            <li class="nav-item" data-bs-dismiss="offcanvas" aria-label="Close">
+            <li className="nav-item" data-bs-dismiss="offcanvas" aria-label="Close">
               <Link
                 to="/"
                 className={`nav-link ${location.pathname === "/" ? "active-navbar-mobile" : ""
@@ -142,7 +142,7 @@ function Navbar() {
                 Home
               </Link>
             </li>
-            <li class="nav-item" data-bs-dismiss="offcanvas" aria-label="Close">
+            <li className="nav-item" data-bs-dismiss="offcanvas" aria-label="Close">
               <Link
                 to="/about"
                 className={`nav-link ${location.pathname === "/about" ? "active-navbar-mobile" : ""
@@ -152,7 +152,7 @@ function Navbar() {
                 About Us
               </Link>
             </li>
-            <li class="nav-item" data-bs-dismiss="offcanvas" aria-label="Close">
+            <li className="nav-item" data-bs-dismiss="offcanvas" aria-label="Close">
               <Link
                 to="/services"
                 className={`nav-link ${location.pathname === "/services" ? "active-navbar-mobile" : ""
@@ -162,7 +162,7 @@ function Navbar() {
                Services
               </Link>
             </li>
-            <li class="nav-item" data-bs-dismiss="offcanvas" aria-label="Close">
+            <li className="nav-item" data-bs-dismiss="offcanvas" aria-label="Close">
               <Link
                 to="/join"
                 className={`nav-link ${location.pathname === "/join" ? "active-navbar-mobile" : ""
@@ -172,7 +172,7 @@ function Navbar() {
                 Join Us
               </Link>
             </li>
-            <li class="nav-item" data-bs-dismiss="offcanvas" aria-label="Close">
+            <li className="nav-item" data-bs-dismiss="offcanvas" aria-label="Close">
               <Link
                 to="/blog"
                 className={`nav-link ${location.pathname === "/blog" ? "active-navbar-mobile" : ""
@@ -182,7 +182,7 @@ function Navbar() {
                 Blog
               </Link>
             </li>
-            <li class="nav-item" data-bs-dismiss="offcanvas" aria-label="Close">
+            <li className="nav-item" data-bs-dismiss="offcanvas" aria-label="Close">
               <Link
                 to="/contact"
                 className={`nav-link ${location.pathname === "/contact" ? ".active-navbar-mobile" : ""

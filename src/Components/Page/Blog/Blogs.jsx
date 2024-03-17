@@ -3,22 +3,12 @@ import './blog.css';
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { getBlog } from "../../../ReduxToolkit/Slice/Blog/BlogSlice";
-
-
-let newBlog = [
-  {
-    Heading: "Catering",
-    praghraph:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam neque eaque dolor..",
-    date: "07-04-2022",
-    author: "Author : Unknown",
-    // Img: `.${catering}`,
-  },
-];
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 function Blogs() {
   const dispatch = useDispatch();
-  const { blogs, status, error, message } = useSelector((state) => state.blog)
+  const { blogs, status, error, } = useSelector((state) => state.blog)
   useEffect(() => {
     dispatch(getBlog())
   }, [])
@@ -166,41 +156,59 @@ function Blogs() {
       {/*sub menu*/}
       <div className="container mt-50 mb-5">
         <div className="row">
-          {blogs.map((data, index) => {
-            const { blogTitle, image, status, _id, createdAt } = data;
-            const newdate = new Date(createdAt);
-            // Convert the date to a more readable format "day, month, year"
-            const formattedDate = newdate.toLocaleDateString("default", {
-              day: "2-digit",
-              month: "long",
-              year: "numeric"
-            });
-            return (
-              <div className="col-md-4 mt-3" key={_id}>
-                <div className="shadow-sm rounded-3">
-                  <Link to={`/BlogSinglePage/${_id}`}>
-                    {image ?  <img
-                      src={image}
-                      alt="" className="img-fluid rounded"
-                    /> :  <img
-                    src={require("../../../Image/blog.png")}
-                    alt="" className="img-fluid rounded"
-                  />}
-                  </Link>
-                  <div className="p-2">
-                    <div className="pt-2 text-secondary fw-bold">
-                      last update <i>{formattedDate}</i>
+          {status === "loading" && (
+            <>
+            {Array.from({ length: 20 }).map((_, index) => (
+              <div className="col-lg-4">
+              <div className="shadow-sm rounded my-2">
+                <Skeleton width={"100%"} height={"200px"} count={1} />
+              </div>
+            </div>
+            ))}
+            </>
+          )}
+          {status === "failed" && (
+            <tr>
+              <td colSpan={6}>{error}</td>
+            </tr>
+          )}
+          {status === "succeeded" && (
+            blogs.blogs.map((data) => {
+              const { blogTitle, image, _id, createdAt } = data;
+              const newdate = new Date(createdAt);
+              // Convert the date to a more readable format "day, month, year"
+              const formattedDate = newdate.toLocaleDateString("default", {
+                day: "2-digit",
+                month: "long",
+                year: "numeric"
+              });
+              return (
+                <div className="col-md-4 mt-3" key={_id}>
+                  <div className="shadow-sm rounded-3">
+                    <Link to={`/BlogSinglePage/${_id}`}>
+                      {image ? <img
+                        src={image}
+                        alt="" className="img-fluid rounded"
+                      /> : <img
+                        src={require("../../../Image/blog.png")}
+                        alt="" className="img-fluid rounded"
+                      />}
+                    </Link>
+                    <div className="p-2">
+                      <div className="pt-2 text-secondary fw-bold">
+                        last update <i>{formattedDate}</i>
+                      </div>
+                      <h1 className="fs-4">{blogTitle}</h1>
+                      {/* <p className="fw-5">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non,
+              esse! <Link to={`/BlogSinglePage/${_id}`}>Read More</Link>
+            </p> */}
                     </div>
-                    <h1 className="fs-4">{blogTitle}</h1>
-                    <p className="fw-5">
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non,
-                      esse! <Link to={`/BlogSinglePage/${_id}`}>Read More</Link>
-                    </p>
                   </div>
                 </div>
-              </div>
-            )
-          })}
+              )
+            })
+          )}
         </div>
       </div>
       {/*readmore buttom*/}

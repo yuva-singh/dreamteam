@@ -11,7 +11,7 @@ function Footer() {
           <div className="col-xl-10">
             <div className="row">
               <div className="col-xl-3">
-                <Link to="/" class="navbar-brand" href="#">
+                <Link to="/" className="navbar-brand" href="#">
                   <h2><span className="display-6 color fw-bold">W</span>ave<span>M</span>antra</h2>
                 </Link>
                 <p className="">
