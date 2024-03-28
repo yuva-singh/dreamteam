@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import { GET_BLOG_API, CREATE_BLOG_API ,GET_SINGLE_BLOG_API,UPDATE_BLOG_API} from "../../../Api_url";
+import { GET_BLOG_API, CREATE_BLOG_API ,GET_SINGLE_BLOG_API,UPDATE_BLOG_API,} from "../../../Api_url";
 // create blog
 export const createBlog = createAsyncThunk('createBlog/blog', async (data, { rejectWithValue }) => {
     try {
@@ -39,7 +39,7 @@ export const getsingleBlog = createAsyncThunk('getsingleBlog/blog', async (id) =
 // delete blog
 export const deleteBlogs = createAsyncThunk('deleteBlogs/blog', async (deleteBlogId, { rejectWithValue }) => {
     try {
-        const response = await axios.delete(`https://wave-mantra.vercel.app/api/blog/${deleteBlogId}`);
+        const response = await axios.delete(`${GET_SINGLE_BLOG_API}/${deleteBlogId}`);
         return response.data.message; // Assuming your API response contains a 'blogs' property
     } catch (error) {
         return rejectWithValue(error.response.data.message);
@@ -87,10 +87,10 @@ const blogSlice = createSlice({
             .addCase(updateBlog.fulfilled, (state, action) => {
                 state.status = 'succeeded';
                 state.message = action.payload;
-                if (state.status === 'succeeded') {
-                    alert(state.message)
-                }
-                state.status = 'idle';
+                // if (state.status === 'succeeded') {
+                //     alert(state.message)
+                // }
+                // state.status = 'idle';
 
             })
             .addCase(updateBlog.rejected, (state, action) => {
@@ -130,8 +130,8 @@ const blogSlice = createSlice({
             })
             .addCase(deleteBlogs.fulfilled, (state, action) => {
                 state.status = 'succeeded';
-                state.blogs = state.blogs.filter(blogs => blogs._id !== action.payload);
-                // state.status = 'idle'
+                state.blogs.blogs = state.blogs.blogs.filter(blogs => blogs._id !== action.payload);
+                state.status = 'idle'
             })
             .addCase(deleteBlogs.rejected, (state, action) => {
                 state.status = 'failed';

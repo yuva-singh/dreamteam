@@ -27,7 +27,7 @@ function ViewBlog() {
           
           <div className="row">
           <div className="background-color-admin py-3 shadow-sm"><h5>Blogs (
-            {blogs.blogs.length}
+            {blogs.blogs ? blogs.blogs.length : ""}
             )</h5></div>
           </div>
          <div className='table-responsive'>

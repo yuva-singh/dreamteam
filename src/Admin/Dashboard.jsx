@@ -20,7 +20,7 @@ function Dashboard() {
             <section className="shadow-sm mt-2 background-color-admin p-3 rounded d-flex justify-content-between">
               <div>
                 <h2>
-                  {blogs.totalBlogs}
+                  {blogs.totalBlogs ? blogs.totalBlogs :"" }
                 </h2>
                 <h6>Total Blog</h6>
 
