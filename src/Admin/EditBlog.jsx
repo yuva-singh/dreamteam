@@ -3,10 +3,11 @@ import JoditEditor from "jodit-react";
 import SIdemenu from "./SIdemenu";
 import { createBlog, getsingleBlog ,updateBlog} from '../ReduxToolkit/Slice/Blog/BlogSlice';
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from 'react-router-dom';
+import { useParams,useNavigate } from 'react-router-dom';
 function EditBlog() {
     const { singleBlogs, status } = useSelector(state => state.blog)
     const { id } = useParams();
+    const navigate = useNavigate()
     const dispatch = useDispatch()
     useEffect(() => {
         dispatch(getsingleBlog(id))
@@ -46,6 +47,7 @@ function EditBlog() {
             formData.append("metaDescription", metaDescription);
             formData.append("image", image);
             dispatch(updateBlog({formData,id}))
+            navigate("/viewblog")
             // setMassage("Blog created successfully!");
             setblogTitle("");
             setdescription("");
